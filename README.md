@@ -8,12 +8,12 @@ na variável genre e rodar o script para adicionar o gênero desejado à db.
 quando terminar de obter os gêneros musicais, deixe a o arquivo .db no mesmo diretório
 
 2. Back end:  
-por padrão roda na porta 3000. roda um endpoint http para cada gênero disponível nos types do arquivo db.js
+por padrão roda na porta 3000. roda um endpoint http para cada gênero disponível nos types do arquivo db.js  
 "npm install"  
 "npm run dev" para rodar o projeto. depende da database obtida pelo scraper para entregar os dados via http.  
 
 3. Front end:  
-por padrão roda na porta 1234. (parcel)
+por padrão roda na porta 1234. (parcel)  
 "npm install"  
 "npm run start" para rodar o front. se não conseguir conectar com o back end, fica em loading infinito.  
 
