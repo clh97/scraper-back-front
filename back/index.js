@@ -18,8 +18,13 @@ genreKeys
                 .then(musics => {
                     const data = []
                     musics.forEach(music => {
+                        const musicData = music.dataValues;
+
                         data.push(
-                            music.dataValues
+                            {
+                                ...musicData,
+                                chords: JSON.parse(musicData.chords)
+                            }
                         )
                     })
                     res.send(data);

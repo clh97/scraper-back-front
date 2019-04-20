@@ -113,11 +113,10 @@ export default class BarChartCard extends Component {
     )
   }
 
-  prepareChartData(jsonData) {
-    let parsedData = JSON.parse(jsonData);
-    let values = Object.values(parsedData)
-    let collection = this.compressArray(values);
-
+  prepareChartData(chords) {
+    let values = Object.values(chords)
+    let collection = this.compressArray(values); // sort of python's collection implemented in js
+    
     const labels = [];
     const data = [];
 

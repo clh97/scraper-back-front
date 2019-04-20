@@ -1,7 +1,6 @@
-import { UPDATE_MUSICS, UPDATE_GENRES, CHANGE_GENRE, CLEAR_MUSICS } from './actions';
+import { UPDATE_MUSICS, UPDATE_GENRES, CLEAR_MUSICS } from './actions';
 
 const initialState = {
-  selectedGenre: 'Todos',
   musics: [],
   genres: []
 }
@@ -24,12 +23,6 @@ export function musics(state = initialState, action) {
       return {
         ...state,
         musics: []
-      }
-
-    case CHANGE_GENRE:
-      return {
-        ...state,
-        selectedGenre: action.payload.genre
       }
 
     default:

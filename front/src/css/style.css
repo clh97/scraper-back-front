@@ -14,8 +14,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px;
+}
+
+header, .header__statistics {
   border-bottom: 1px solid var(--default-white);
+  padding: 12px;
+}
+
+.header__statistics {
+  
 }
 
 .header__options {
@@ -34,7 +41,6 @@ header {
 
 .card {
   width: calc(50% - 32px);
-  height: 280px;
   padding: 6px;
   margin: 10px;
   background-color: #f1f1f1;
@@ -80,10 +86,11 @@ header {
 
 /* https://loading.io/css/ */
 .lds-ellipsis {
-  display: inline-block;
+  display: block;
   position: relative;
   width: 64px;
   height: 64px;
+  margin: 0 auto;
 }
 .lds-ellipsis div {
   position: absolute;

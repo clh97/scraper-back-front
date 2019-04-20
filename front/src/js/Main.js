@@ -4,14 +4,13 @@ import instance from './api';
 import { updateMusics } from './redux/actions';
 
 import Header from './components/Header';
+import Statistics from './components/Statistics';
 import ChartCard from './components/ChartCard';
 import Loading from './components/Loading';
 
 export class Main extends Component {
   componentDidMount() {
-    const { genre } = this.props;
-
-    this.fetchMusics(genre);
+    this.fetchMusics('todos');
   }
 
   fetchMusics(genre) {
@@ -29,6 +28,7 @@ export class Main extends Component {
     return (
       <main className='content'>
         <Header title='Bossa' />
+        <Statistics />
         <main className='content__cards'>
           {
             musics.length > 0 ?
